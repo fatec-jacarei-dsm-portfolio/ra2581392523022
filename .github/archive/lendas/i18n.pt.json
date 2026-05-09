@@ -1,0 +1,35 @@
+{
+  "sections": {
+    "lendas": "Lendas"
+  },
+  "recognition": {
+    "awardsLabel": "Conquistas",
+    "testimonialsLabel": "O que dizem",
+    "awards": [
+      { "title": "Top 3 - Hackathon Regional", "subtitle": "Categoria Interface" },
+      { "title": "Contribuição Open Source", "subtitle": "Biblioteca React +12k estrelas" },
+      { "title": "Freelance - SaaS", "subtitle": "0 -> lançamento em 6 semanas" },
+      { "title": "Graduação", "subtitle": "Ciência da Computação" }
+    ],
+    "testimonials": [
+      {
+        "quote": "Entregou além do esperado. Interface impecável e código limpo.",
+        "name": "Joao Silva",
+        "role": "CTO",
+        "company": "Empresa Alpha"
+      },
+      {
+        "quote": "A atenção ao detalhe mudou o padrão do time.",
+        "name": "Maria Costa",
+        "role": "PM",
+        "company": "Startup Beta"
+      },
+      {
+        "quote": "Profissional, criativo e autônomo. Recomendo sem hesitar.",
+        "name": "Pedro Alves",
+        "role": "Founder",
+        "company": "Agencia Gamma"
+      }
+    ]
+  }
+}

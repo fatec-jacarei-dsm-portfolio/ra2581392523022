@@ -1,0 +1,35 @@
+{
+  "sections": {
+    "lendas": "Legends"
+  },
+  "recognition": {
+    "awardsLabel": "Awards",
+    "testimonialsLabel": "What they say",
+    "awards": [
+      { "title": "Top 3 - Regional Hackathon", "subtitle": "Interface category" },
+      { "title": "Open Source Contribution", "subtitle": "React lib +12k stars" },
+      { "title": "Freelance - SaaS", "subtitle": "0 -> launch in 6 weeks" },
+      { "title": "Graduation", "subtitle": "Computer Science" }
+    ],
+    "testimonials": [
+      {
+        "quote": "Delivered beyond expectations. Clean code and a sharp interface.",
+        "name": "Joao Silva",
+        "role": "CTO",
+        "company": "Company Alpha"
+      },
+      {
+        "quote": "The attention to detail changed our team standard.",
+        "name": "Maria Costa",
+        "role": "PM",
+        "company": "Startup Beta"
+      },
+      {
+        "quote": "Professional, creative, and autonomous. Strongly recommended.",
+        "name": "Pedro Alves",
+        "role": "Founder",
+        "company": "Agency Gamma"
+      }
+    ]
+  }
+}

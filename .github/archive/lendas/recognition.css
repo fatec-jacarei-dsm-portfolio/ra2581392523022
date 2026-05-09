@@ -1,0 +1,128 @@
+#lendas {
+      background: var(--bg2);
+}
+
+.lg {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 2px;
+      background: var(--border);
+      border: 1px solid var(--border);
+}
+
+.aw-col {
+      background: var(--bg3);
+      padding: 40px 36px;
+}
+
+.aw {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+}
+
+.aw:last-child {
+      border-bottom: none;
+}
+
+.aw-yr {
+      font-family: "Unbounded", sans-serif;
+      font-size: 26px;
+      letter-spacing: 2px;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 4px;
+}
+
+.aw-t {
+      font-family: "Unbounded", sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+      color: var(--text);
+      margin-bottom: 2px;
+}
+
+.aw-w {
+      font-family: "Unbounded", sans-serif;
+      font-size: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text3);
+}
+
+.te-col {
+      background: var(--bg2);
+      padding: 40px 44px;
+}
+
+.te {
+      padding: 26px 0;
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr 44px;
+      gap: 22px;
+      align-items: start;
+}
+
+.te:last-child {
+      border-bottom: none;
+}
+
+.te-q {
+      font-family: "Unbounded", sans-serif;
+      font-weight: 200;
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--text);
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 18px;
+}
+
+.te-q::before {
+      content: "\"";
+      position: absolute;
+      left: 0;
+      top: -4px;
+      font-family: "Unbounded", sans-serif;
+      font-size: 28px;
+      color: var(--accent2);
+      line-height: 1;
+}
+
+.te-w {
+      font-family: "Unbounded", sans-serif;
+      font-size: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text3);
+}
+
+.te-w strong {
+      color: var(--accent);
+      display: block;
+      font-weight: 400;
+      font-size: 9px;
+      margin-bottom: 2px;
+}
+
+.te-av {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Unbounded", sans-serif;
+      font-weight: 200;
+      font-size: 13px;
+      color: var(--text3);
+      flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+      .lg {
+            grid-template-columns: 1fr;
+      }
+}

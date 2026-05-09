@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "title": "CECON - Portfolio"
+  },
+  "loader": {
+    "messages": ["iniciando", "carregando", "preparando", "pronto"],
+    "welcome": "bem-vindo."
+  },
+  "header": {
+    "logo": "cecon",
+    "theme": "tema"
+  },
+  "hire": {
+    "text": "Contrate-me",
+    "aria": "disponível para projetos — clique para contato"
+  },
+  "entry": {
+    "name": "LUCAS CECON",
+    "roleLeft": "back",
+    "roleRight": "front",
+    "roleLine": "desenvolvedor",
+    "scroll": "role",
+    "aria": "CECON desenvolvedor front-end"
+  },
+  "sections": {
+    "origin": "Origem",
+    "missions": "Missões",
+    "arsenal": "Arsenal"
+  },
+  "origin": {
+    "cards": [
+      {
+        "line1": "Não construo apenas interfaces.",
+        "line2Prefix": "Crio experiências rápidas, intuitivas e pensadas ",
+        "highlight": "para pessoas.",
+        "line2Suffix": "",
+        "subtitle": "Front-end",
+        "accent": "primary"
+      },
+      {
+        "line1": "Estruturo soluções escaláveis",
+        "line2Prefix": "e eficientes que transformam lógica em ",
+        "highlight": "impacto real.",
+        "line2Suffix": "",
+        "subtitle": "Back-end",
+        "accent": "alt"
+      },
+      {
+        "line1": "Dados bem organizados",
+        "line2Prefix": " são ",
+        "highlight": "a base de sistemas inteligentes",
+        "line2Suffix": ", performáticos e confiáveis.",
+        "subtitle": "Banco de dados",
+        "accent": "primary"
+      },
+      {
+        "line1": "",
+        "line2Prefix": "",
+        "highlight": "Aprendizado constante",
+        "line2Suffix": ", curiosidade técnica e vontade de construir soluções que realmente importam.",
+        "subtitle": "Aprendizado",
+        "accent": "alt"
+      }
+    ],
+    "stats": [
+      { "value": "3+", "label": "Anos" },
+      { "value": "9+", "label": "Projetos" },
+      { "value": "∞", "label": "Vontade de evoluir" },
+      { "value": "Fé", "label": "mantém meus pés no chão" }
+    ]
+  },
+  "projects": [
+    {
+      "mission": "missao 001",
+      "titleLines": ["FICTION", "CORPORATION"],
+      "desc": "Um catálogo web de filmes de ficção científica e meu primeiro grande mergulho no desenvolvimento.",
+      "detail": "Desenvolvido no SENAI, atuei como Scrum Master e líder técnico focado no Front-end. Apesar do desafio de aprender enquanto construía, entregamos um sistema responsivo com HTML, CSS, JS, PHP e MySQL. O projeto tirou nota 10 e conquistou o 2º lugar da turma, superando todas as expectativas iniciais.",
+      "aria": "Missao 001 - ver estudo de caso"
+    },
+    {
+      "mission": "missao 002",
+      "titleLines": ["KOMODO"],
+      "desc": "Sistema web para gestão de tickets de manutenção com múltiplos perfis de acesso.",
+      "detail": "O grande desafio foi lidar com a lógica de 4 tipos de usuários enquanto eu ainda aprendia o Back-end. Fiquei responsável pela interface, responsividade e banco de dados. O resultado? Um projeto tão funcional e visualmente agradável que foi eleito o melhor da sala e cotado para uso oficial no próprio SENAI.",
+      "aria": "Missao 002 - ver estudo de caso"
+    },
+    {
+      "mission": "missao 003",
+      "titleLines": ["SECRETARIA", "SENAI"],
+      "desc": "Nosso TCC e primeiro projeto com cliente real: digitalizando a secretaria do SENAI.",
+      "detail": "Com uma equipe de apenas 4 pessoas, a complexidade foi altíssima. Usei Laravel e Tailwind para criar a interface e mergulhei fundo em rotas PHP. Entregamos um sistema completo que tirou nota máxima e foi aprovado pelo cliente, sendo um salto técnico imenso para todos.",
+      "aria": "Missao 003 - ver estudo de caso"
+    },
+    {
+      "mission": "missao 004",
+      "titleLines": ["LABORATÓRIO", "AGRIRSLAB"],
+      "desc": "Plataforma web com CRUD de notícias e projetos para o laboratório Agrirslab do INPE.",
+      "detail": "Meu maior desafio aqui foi atuar como desenvolvedor e também tutor técnico para o grupo. Desenvolvi boa parte do Front-end, os scripts e estruturei o banco com PostgreSQL. O sistema ficou bonito, funcional e garantiu o 3º lugar na apresentação, com grande foco em boas práticas de documentação.",
+      "aria": "Missao 004 - ver estudo de caso"
+    },
+    {
+      "mission": "missao 005",
+      "titleLines": ["PORTFOLIO"],
+      "desc": "Onde você está agora. Construído em apenas uma semana com foco em design e performance.",
+      "detail": "Cansado do básico, decidi me desafiar usando React e Tailwind para criar esta landing page do zero. O maior obstáculo foi o tempo curto para implementar todas as animações sozinho, mas o resultado final é, de longe, a interface mais ousada e bonita que já desenvolvi.",
+      "aria": "Missao 005 - ver estudo de caso"
+    },
+    {
+      "mission": "missao 006",
+      "titleLines": ["FATEC", "BOT"],
+      "desc": "Um chatbot robusto para a secretaria da FATEC, focado em alta qualidade e arquitetura.",
+      "detail": "Meu primeiro grande projeto focado em Back-end, lidando com autenticação e conteinerização. Usamos um stack moderno (React, TS, Docker, PostgreSQL) e elevamos o nível na documentação com modelagem de dados. A entrega da primeira sprint já rendeu o topo da turma.",
+      "aria": "Missao 006 - ver estudo de caso"
+    }
+],
+  "skills": {
+    "soft": [
+      "Comunicacao clara",
+      "Autonomia",
+      "Pensamento de produto",
+      "Atencao a detalhes",
+      "Entrega consistente"
+    ],
+    "clientsLabel": "Vontade de evoluir",
+    "clients": ["∞"]
+  },
+  "contact": {
+    "aria": "Contato",
+    "headlineLines": ["PRONTO PARA", "O PRÓXIMO", "NÍVEL?"],
+    "headlineHighlightIndex": 2,
+    "ctaEmail": "Email ->",
+    "ctaLinkedIn": "LinkedIn",
+    "ctaGithub": "GitHub",
+    "ctaResume": "Currículo",
+    "locationLabel": "Localização",
+    "location": "São José dos Campos",
+    "statusLabel": "Status",
+    "status": "Disponível",
+    "replyLabel": "Responde em",
+    "reply": "< 24h",
+    "footerLeft": "2025 Cecon",
+    "footerMid": "Feito com obsessão",
+    "footerRight": "SJC - Brasil"
+  },
+  "projectDetail": {
+    "tag": "Case",
+    "year": "Ano",
+    "stack": "Stack",
+    "links": "Links",
+    "live": "Live",
+    "repo": "Repo",
+    "noLinks": "Links sob consulta",
+    "back": "Voltar para inicio",
+    "notFoundTitle": "Projeto nao encontrado",
+    "notFoundBody": "O projeto que voce procura ainda nao esta disponivel."
+  }
+}

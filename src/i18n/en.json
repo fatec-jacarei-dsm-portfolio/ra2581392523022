@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "title": "CECON - Portfolio"
+  },
+  "loader": {
+    "messages": ["starting", "loading", "preparing", "ready"],
+    "welcome": "welcome."
+  },
+  "header": {
+    "logo": "cecon.",
+    "theme": "theme"
+  },
+  "hire": {
+    "text": "hire me",
+    "aria": "available for projects - click to contact"
+  },
+  "entry": {
+    "name": "LUCAS CECON",
+    "roleLeft": "back",
+    "roleRight": "front",
+    "roleLine": "developer",
+    "scroll": "role",
+    "aria": "CECON front-end developer"
+  },
+  "sections": {
+    "origin": "Origin",
+    "missions": "Missions",
+    "arsenal": "Arsenal"
+  },
+  "origin": {
+    "cards": [
+      {
+        "line1": "I don't just build interfaces.",
+        "line2Prefix": "I craft fast, intuitive experiences",
+        "highlight": "designed for people.",
+        "line2Suffix": "",
+        "subtitle": "Front-end",
+        "accent": "primary"
+      },
+      {
+        "line1": "I structure scalable,",
+        "line2Prefix": " efficient solutions that turn logic into ",
+        "highlight": "real impact.",
+        "line2Suffix": "",
+        "subtitle": "Back-end",
+        "accent": "alt"
+      },
+      {
+        "line1": "Well-organized data are",
+        "line2Prefix": "",
+        "highlight": "the foundation",
+        "line2Suffix": "of intelligent, performant, reliable systems.",
+        "subtitle": "Database",
+        "accent": "primary"
+      },
+      {
+        "line1": "",
+        "line2Prefix": "",
+        "highlight": "Constant learning,",
+        "line2Suffix": "technical curiosity and a will to build solutions that really matter.",
+        "subtitle": "Learning",
+        "accent": "alt"
+      }
+    ],
+    "stats": [
+      { "value": "3+", "label": "Years" },
+      { "value": "9+", "label": "Projects" },
+      { "value": "∞", "label": "Will to evolve" },
+      { "value": "Faith", "label": "keeps my feet on the ground" }
+    ]
+  },
+  "projects": [
+    {
+      "mission": "mission 001",
+      "titleLines": ["FICTION", "CORPORATION"],
+      "desc": "A web catalog of sci-fi movies and my first deep dive into development.",
+      "detail": "Developed at SENAI, I acted as Scrum Master and technical lead focused on the Front-end. Despite the challenge of learning while building, we delivered a responsive system with HTML, CSS, JS, PHP, and MySQL. The project got a perfect 10 and won 2nd place in the class, exceeding all initial expectations.",
+      "aria": "Mission 001 - view case study"
+    },
+    {
+      "mission": "mission 002",
+      "titleLines": ["KOMODO"],
+      "desc": "Web system for maintenance ticket management with multiple access profiles.",
+      "detail": "The main challenge was handling the logic for 4 user types while I was still learning the Back-end. I was responsible for the interface, responsiveness, and database. The result? A project so functional and visually appealing that it was voted the best in the class and considered for official use at SENAI itself.",
+      "aria": "Mission 002 - view case study"
+    },
+    {
+      "mission": "mission 003",
+      "titleLines": ["SECRETARIA", "SENAI"],
+      "desc": "Our capstone project and first real-client work: digitizing the SENAI secretariat.",
+      "detail": "With a team of just 4 people, the complexity was extremely high. I used Laravel and Tailwind to build the interface and dove deep into PHP routing. We delivered a complete system that achieved top marks and was approved by the client, marking a massive technical leap for us all.",
+      "aria": "Mission 003 - view case study"
+    },
+    {
+      "mission": "mission 004",
+      "titleLines": ["INPE", "LABORATORY"],
+      "desc": "Web platform with a news and projects CRUD for INPE's Agrislab laboratory.",
+      "detail": "My biggest challenge here was acting as both a developer and technical tutor for the group. I built most of the Front-end, the scripts, and structured the database with PostgreSQL. The system turned out beautiful and functional, securing 3rd place in the presentation, with a strong focus on documentation best practices.",
+      "aria": "Mission 004 - view case study"
+    },
+    {
+      "mission": "mission 005",
+      "titleLines": ["PORTFOLIO"],
+      "desc": "Where you are right now. Built in just one week with a focus on design and performance.",
+      "detail": "Tired of the basics, I decided to challenge myself by using React and Tailwind to build this landing page from scratch. The biggest hurdle was the short timeframe to implement all the animations alone, but the final result is by far the boldest and most beautiful interface I've ever developed.",
+      "aria": "Mission 005 - view case study"
+    },
+    {
+      "mission": "mission 006",
+      "titleLines": ["FATEC", "BOT"],
+      "desc": "A robust chatbot for the FATEC secretariat, focused on high quality and architecture.",
+      "detail": "My first major Back-end focused project, dealing with authentication and containerization. We used a modern stack (React, TS, Docker, PostgreSQL) and raised the bar on documentation with data modeling. The first sprint delivery already earned us the top spot in the class.",
+      "aria": "Mission 006 - view case study"
+    }
+],
+  "skills": {
+    "soft": [
+      "Clear communication",
+      "Autonomy",
+      "Product thinking",
+      "Attention to detail",
+      "Consistent delivery"
+    ],
+    "clientsLabel": "Worked with",
+    "clients": [
+      "Company Alpha",
+      "Startup Beta",
+      "Agency Gamma",
+      "Client Delta",
+      "Project Epsilon"
+    ]
+  },
+  "contact": {
+    "aria": "Contact",
+    "headlineLines": ["READY FOR", "THE NEXT", "LEVEL?"],
+    "headlineHighlightIndex": 2,
+    "ctaEmail": "Email ->",
+    "ctaLinkedIn": "LinkedIn",
+    "ctaGithub": "GitHub",
+    "ctaResume": "Resume",
+    "locationLabel": "Location",
+    "location": "Sao Jose dos Campos",
+    "statusLabel": "Status",
+    "status": "Available",
+    "replyLabel": "Reply in",
+    "reply": "< 24h",
+    "footerLeft": "2025 Cecon",
+    "footerMid": "Built with obsession",
+    "footerRight": "SJC - Brasil"
+  },
+  "projectDetail": {
+    "tag": "Case",
+    "year": "Year",
+    "stack": "Stack",
+    "links": "Links",
+    "live": "Live",
+    "repo": "Repo",
+    "noLinks": "Links on request",
+    "back": "Back to home",
+    "notFoundTitle": "Project not found",
+    "notFoundBody": "The project you are looking for is not available yet."
+  }
+}
