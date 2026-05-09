@@ -17,7 +17,6 @@ export default function Skills({ lang }) {
             <div key={skill.label} className="ars-c">
               <div className="t-ico">{skill.short}</div>
               <span className="t-nm">{skill.label}</span>
-              <div className="t-br" style={{ "--l": `${skill.level}%` }}></div>
             </div>
           ))}
         </div>

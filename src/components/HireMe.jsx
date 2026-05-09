@@ -1,8 +1,14 @@
 import { t } from "../i18n/i18n";
 
-export default function HireMe({ lang, email }) {
+export default function HireMe({ lang, link }) {
   return (
-    <a href={`mailto:${email}`} id="hire" aria-label={t(lang, "hire.aria")}>
+    <a
+      href={link}
+      id="hire"
+      aria-label={t(lang, "hire.aria")}
+      target="_blank"
+      rel="noopener"
+    >
       <div className="h-dot" aria-hidden="true"></div>
       {t(lang, "hire.text")}
     </a>

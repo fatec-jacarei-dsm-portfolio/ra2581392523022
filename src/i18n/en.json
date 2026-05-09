@@ -115,19 +115,16 @@
 ],
   "skills": {
     "soft": [
-      "Clear communication",
-      "Autonomy",
-      "Product thinking",
-      "Attention to detail",
-      "Consistent delivery"
+"Clear communication",
+"Problem-solving",
+"Collaboration",
+"Planning",
+"Consistent delivery"
     ],
-    "clientsLabel": "Worked with",
+    "clientsLabel": "Education",
     "clients": [
-      "Company Alpha",
-      "Startup Beta",
-      "Agency Gamma",
-      "Client Delta",
-      "Project Epsilon"
+      "Systems Development (Technical) - SENAI SP",
+      "Multiplatform Software Development - FATEC Jacarei (in progress)"
     ]
   },
   "contact": {
@@ -139,14 +136,14 @@
     "ctaGithub": "GitHub",
     "ctaResume": "Resume",
     "locationLabel": "Location",
-    "location": "Sao Jose dos Campos",
+    "location": "Jacarei",
     "statusLabel": "Status",
     "status": "Available",
     "replyLabel": "Reply in",
     "reply": "< 24h",
-    "footerLeft": "2025 Cecon",
+    "footerLeft": "2026 Cecon",
     "footerMid": "Built with obsession",
-    "footerRight": "SJC - Brasil"
+    "footerRight": "Jacarei - Brasil"
   },
   "projectDetail": {
     "tag": "Case",

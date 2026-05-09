@@ -7,7 +7,7 @@
     "welcome": "bem-vindo."
   },
   "header": {
-    "logo": "cecon",
+    "logo": "cecon.",
     "theme": "tema"
   },
   "hire": {
@@ -116,13 +116,16 @@
   "skills": {
     "soft": [
       "Comunicacao clara",
-      "Autonomia",
-      "Pensamento de produto",
-      "Atencao a detalhes",
+      "Resolução de problemas",
+      "Colaboração",
+      "Planejamento",
       "Entrega consistente"
     ],
-    "clientsLabel": "Vontade de evoluir",
-    "clients": ["∞"]
+    "clientsLabel": "Formação",
+    "clients": [
+      "Técnico em Desenvolvimento de Sistemas - SENAI SP",
+      "Cursando Desenvolvimento de Software Multiplataforma - FATEC Jacareí"
+    ]
   },
   "contact": {
     "aria": "Contato",
@@ -133,14 +136,14 @@
     "ctaGithub": "GitHub",
     "ctaResume": "Currículo",
     "locationLabel": "Localização",
-    "location": "São José dos Campos",
+    "location": "Jacareí",
     "statusLabel": "Status",
     "status": "Disponível",
     "replyLabel": "Responde em",
     "reply": "< 24h",
-    "footerLeft": "2025 Cecon",
+    "footerLeft": "2026 Cecon",
     "footerMid": "Feito com obsessão",
-    "footerRight": "SJC - Brasil"
+    "footerRight": "Jacareí - Brasil"
   },
   "projectDetail": {
     "tag": "Case",

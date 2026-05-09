@@ -38,6 +38,11 @@ export default function Projects({ lang }) {
               role="listitem"
               aria-label={projectCopy?.aria}
             >
+              {project.cover ? (
+                <div className="cp-media" aria-hidden="true">
+                  <img src={project.cover} alt="" loading="lazy" />
+                </div>
+              ) : null}
               <div className="cp-clip" aria-hidden="true"></div>
               <div className="cp-body">
                 <div>
@@ -81,6 +86,10 @@ function useProjectsReveal(ref) {
       const items = gsap.utils.toArray(".cp", ref.current);
       items.forEach((el, i) => {
         const tilt = i % 2 === 0 ? -1.2 : 1.2;
+        const isLate = i >= 4;
+        const baseDelay = i * 0.3;
+        const delay = isLate ? baseDelay * 0.6 : baseDelay;
+        const duration = isLate ? 1.5 : 1.9;
         gsap.fromTo(
           el,
           { x: -90, opacity: 0, scale: 0.98, rotateZ: tilt },
@@ -89,9 +98,9 @@ function useProjectsReveal(ref) {
             opacity: 1,
             scale: 1,
             rotateZ: 0,
-            duration: 1.9,
+            duration,
             ease: "power3.out",
-            delay: i * 0.3,
+            delay,
             scrollTrigger: {
               trigger: el,
               start: "top 90%",

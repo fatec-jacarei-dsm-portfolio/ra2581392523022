@@ -41,20 +41,19 @@ export default function Home({ lang, onToggleLang }) {
       const intro = document.querySelector("#entry");
       const origin = document.querySelector("#origem");
       if (intro && origin) {
-        gsap.set(origin, { yPercent: 100 });
         gsap
           .timeline({
             scrollTrigger: {
               trigger: intro,
               start: "top top",
+              end: "+=50%",
               scrub: true,
               pin: true,
-              pinSpacing: false,
               anticipatePin: 1,
             },
           })
-          .to(origin, { yPercent: 0, ease: "none" }, 0)
-          .to(intro, { yPercent: -18, autoAlpha: 0, ease: "none" }, 0);
+          .fromTo(origin, { yPercent: 24 }, { yPercent: 0, ease: "none" }, 0)
+          .to(intro, { yPercent: -22, autoAlpha: 0, ease: "none" }, 0);
       }
     });
 
@@ -70,7 +69,7 @@ export default function Home({ lang, onToggleLang }) {
         welcomeText={copy.loader.welcome}
       />
       <Header lang={lang} onToggleLang={onToggleLang} />
-      <HireMe lang={lang} email={contactInfo.email} />
+      <HireMe lang={lang} link={contactInfo.whatsapp} />
 
       <main className="relative z-[1]">
         <Intro lang={lang} />

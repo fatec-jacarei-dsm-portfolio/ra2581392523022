@@ -10,6 +10,8 @@ export default function ProjectDetail({ lang, onToggleLang }) {
   const projectIndex = projects.findIndex((item) => item.slug === slug);
   const project = projectIndex >= 0 ? projects[projectIndex] : null;
   const projectCopy = projectIndex >= 0 ? copy.projects?.[projectIndex] : null;
+  const gallery = project?.gallery ?? [];
+  const title = projectCopy?.titleLines?.join(" ") ?? "";
 
   if (!project || !projectCopy) {
     return (
@@ -103,6 +105,20 @@ export default function ProjectDetail({ lang, onToggleLang }) {
             </div>
           </div>
         </div>
+
+        {gallery.length ? (
+          <div className="pd-gallery">
+            {gallery.map((src, index) => (
+              <div key={`${src}-${index}`} className="pd-img">
+                <img
+                  src={src}
+                  alt={`${title} image ${index + 1}`}
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+        ) : null}
 
         <Link className="mt-10 inline-block h-btn" to="/">
           {t(lang, "projectDetail.back")}

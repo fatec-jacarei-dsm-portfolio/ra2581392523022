@@ -6,6 +6,10 @@ export default function Contact({ lang }) {
   const lines = copy.contact.headlineLines;
   const highlightIndex =
     copy.contact.headlineHighlightIndex ?? lines.length - 1;
+  const resumeLink =
+    lang === "pt" ? contactInfo.resumePt : contactInfo.resumeEn;
+  const resumeName =
+    lang === "pt" ? "lucas-cecon-cv-pt.pdf" : "lucas-cecon-cv-en.pdf";
 
   return (
     <footer id="contact" aria-label={copy.contact.aria}>
@@ -26,7 +30,12 @@ export default function Contact({ lang }) {
             ))}
           </h2>
           <div className="ct-ls">
-            <a className="ct-l p" href={`mailto:${contactInfo.email}`}>
+            <a
+              className="ct-l p"
+              href={contactInfo.emailLink}
+              target="_blank"
+              rel="noopener"
+            >
               {copy.contact.ctaEmail}
             </a>
             <a
@@ -45,7 +54,7 @@ export default function Contact({ lang }) {
             >
               {copy.contact.ctaGithub}
             </a>
-            <a className="ct-cv" href={contactInfo.resume} download>
+            <a className="ct-cv" href={resumeLink} download={resumeName}>
               {copy.contact.ctaResume}
             </a>
           </div>
