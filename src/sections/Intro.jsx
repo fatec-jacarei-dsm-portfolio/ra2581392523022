@@ -6,6 +6,7 @@ export default function Intro({ lang }) {
   const name = entry.name;
   const marqueeItems = Array.from({ length: 4 }, () => name);
   const marqueeLoop = [...marqueeItems, ...marqueeItems];
+  const assetBase = import.meta.env.BASE_URL;
 
   return (
     <section
@@ -55,7 +56,7 @@ export default function Intro({ lang }) {
             {/* Center avatar slot to preserve layout spacing */}
             <div className="intro-center">
               <div className="intro-avatar">
-                <img src="/img/avatar.png" alt={entry.name} />
+                <img src={`${assetBase}img/avatar.png`} alt={entry.name} />
               </div>
             </div>
 
