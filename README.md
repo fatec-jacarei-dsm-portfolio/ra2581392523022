@@ -1,16 +1,70 @@
-# React + Vite
+# Portfolio - Lucas Cecon
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um portfólio moderno desenvolvido com Vite + React, Tailwind CSS, animações GSAP e suporte a múltiplos idiomas (EN/PT). O projeto apresenta meus principais trabalhos, habilidades e reconhecimentos, com navegação fluida e responsiva, pronto para deploy no GitHub Pages.
 
-Currently, two official plugins are available:
+## ✨ Demonstração
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+> (Adicione aqui um link para o site publicado, se houver)
 
-## React Compiler
+## 🚀 Tecnologias Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Vite** + **React** (JavaScript + JSX)
+- **Tailwind CSS** (PostCSS)
+- **React Router** (`HashRouter` para GitHub Pages)
+- **GSAP** + **ScrollTrigger** (animações)
+- **i18n** simples via JSON (EN/PT)
+- **Estrutura modular**: components, sections, pages, data
 
-## Expanding the ESLint configuration
+## 📁 Estrutura do Projeto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+  App.jsx
+  main.jsx
+  assets/
+  components/      # Componentes reutilizáveis (Header, Loader, etc)
+  data/            # Fontes de dados (projects, skills, contact)
+  i18n/            # Traduções (en.json, pt.json)
+  pages/           # Telas principais (Home, ProjectDetail)
+  sections/        # Seções da Home (Intro, About, Projects, etc)
+public/
+  img/             # Imagens do portfólio
+  font/            # Fontes customizadas
+```
+
+## 🗺️ Funcionalidades
+
+- **Home**: Apresentação, sobre, projetos, skills, reconhecimentos e contato.
+- **Detalhe do Projeto**: Página individual para cada projeto (`/projects/:slug`).
+- **Animações**: Transições suaves e efeitos de scroll com GSAP.
+- **Responsivo**: Layout adaptado para desktop e mobile.
+- **Suporte a EN/PT**: Alternância de idioma no topo fixo.
+- **Deploy fácil**: Pronto para GitHub Pages (`/Portfolio_LucasCecon/`).
+
+## 🌐 Internacionalização
+
+- Inglês (padrão) e Português.
+- Dicionários simples em en.json e pt.json.
+- Alternância de idioma no topo da página.
+
+## 🧩 Organização dos Dados
+
+- Projetos, skills e reconhecimentos são mantidos em arquivos JS/JSON em data.
+- Fácil de adicionar/editar projetos e informações.
+
+## 🖼️ Animações
+
+- Utiliza GSAP e ScrollTrigger para animações de entrada, transições e efeitos de scroll.
+- Hooks reutilizáveis e limpeza automática ao desmontar componentes.
+
+## 📝 Customização
+
+- Adicione novos projetos em projects.js.
+- Edite textos e traduções em en.json e pt.json.
+- Personalize estilos via Tailwind em tailwind.config.cjs.
+
+## 📦 Scripts Disponíveis
+
+- `npm run dev` — Inicia o servidor de desenvolvimento.
+- `npm run build` — Gera build de produção.
+- `npm run preview` — Visualiza build localmente.
