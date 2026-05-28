@@ -7,12 +7,8 @@ export default function Skills({ lang }) {
   const clients = copy.skills.clients;
 
   return (
-    <section
-      className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-[var(--bg)] py-[100px]"
-      id="arsenal"
-      aria-label={copy.sections.arsenal}
-    >
-      <div className="relative z-[2] mx-auto max-w-[1100px] px-[60px] max-[900px]:px-6">
+    <section className="sec" id="arsenal" aria-label={copy.sections.arsenal}>
+      <div className="wrap">
         <p className="s-tag rv" data-n="03">
           {copy.sections.arsenal}
         </p>

@@ -39,7 +39,7 @@ public/
 - **Animações**: Transições suaves e efeitos de scroll com GSAP.
 - **Responsivo**: Layout adaptado para desktop e mobile.
 - **Suporte a EN/PT**: Alternância de idioma no topo fixo.
-- **Deploy fácil**: Pronto para GitHub Pages (`/ra2581392523022/`).
+- **Deploy fácil**: Pronto para GitHub Pages (`/Portfolio_LucasCecon/`).
 
 ## 🌐 Internacionalização
 

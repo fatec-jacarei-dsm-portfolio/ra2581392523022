@@ -13,11 +13,12 @@ export default function Projects({ lang }) {
 
   return (
     <section
-      className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-[var(--bg2)] pb-0 pt-[80px]"
+      className="sec"
       id="missoes"
+      style={{ paddingBottom: 0 }}
       aria-label={copy.sections.missions}
     >
-      <div className="relative z-[2] mb-8 ml-0 mr-auto flex max-w-[1100px] flex-col items-start px-[60px] max-[900px]:px-6">
+      <div className="wrap" style={{ marginBottom: "32px" }}>
         <p className="s-tag rv" data-n="02">
           {copy.sections.missions}
         </p>
