@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Portfolio - Lucas Cecon
 
 Um portfólio moderno desenvolvido com Vite + React, Tailwind CSS, animações GSAP e suporte a múltiplos idiomas (EN/PT). O projeto apresenta meus principais trabalhos, habilidades e reconhecimentos, com navegação fluida e responsiva, pronto para deploy no GitHub Pages.
@@ -40,7 +39,7 @@ public/
 - **Animações**: Transições suaves e efeitos de scroll com GSAP.
 - **Responsivo**: Layout adaptado para desktop e mobile.
 - **Suporte a EN/PT**: Alternância de idioma no topo fixo.
-- **Deploy fácil**: Pronto para GitHub Pages (`/Portfolio_LucasCecon/`).
+- **Deploy fácil**: Pronto para GitHub Pages (`/ra2581392523022/`).
 
 ## 🌐 Internacionalização
 
@@ -69,7 +68,3 @@ public/
 - `npm run dev` — Inicia o servidor de desenvolvimento.
 - `npm run build` — Gera build de produção.
 - `npm run preview` — Visualiza build localmente.
-=======
-# ra2581392523022
-Repositório do aluno LUCAS FERREIRA CECON.
->>>>>>> dd9c1484c2d4c3841f4cc3537b7d4dba74470172

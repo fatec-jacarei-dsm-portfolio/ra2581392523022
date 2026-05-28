@@ -41,19 +41,29 @@ export default function Home({ lang, onToggleLang }) {
       const intro = document.querySelector("#entry");
       const origin = document.querySelector("#origem");
       if (intro && origin) {
+        gsap.set(intro, { clipPath: "inset(0% 0% 0% 0%)" });
         gsap
           .timeline({
             scrollTrigger: {
               trigger: intro,
               start: "top top",
-              end: "+=50%",
+              end: "bottom top",
               scrub: true,
               pin: true,
+              pinSpacing: false,
               anticipatePin: 1,
             },
           })
           .fromTo(origin, { yPercent: 24 }, { yPercent: 0, ease: "none" }, 0)
-          .to(intro, { yPercent: -22, autoAlpha: 0, ease: "none" }, 0);
+          .to(
+            intro,
+            {
+              clipPath: "inset(0% 0% 100% 0%)",
+              autoAlpha: 0,
+              ease: "none",
+            },
+            0,
+          );
       }
     });
 

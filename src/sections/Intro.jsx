@@ -47,21 +47,25 @@ export default function Intro({ lang }) {
         <div className="w-full flex items-end justify-center">
           <div className="flex w-full items-end justify-center gap-3 md:gap-4">
             {/* Left: fixed width, closer to the center */}
-            <div className="intro-side hidden md:flex flex-none w-[180px] lg:w-[220px] items-center justify-end pb-3">
+            <div className="hidden md:flex h-[clamp(360px,68vh,620px)] flex-none w-[180px] items-center justify-end pb-3 lg:w-[220px] sm:h-[clamp(420px,70vh,660px)]">
               <div className="whitespace-nowrap text-[12px] md:text-[13px] uppercase tracking-[0.35em] text-[var(--accent)] text-right">
                 {entry.roleLeft} &nbsp; {entry.roleRight}
               </div>
             </div>
 
             {/* Center avatar slot to preserve layout spacing */}
-            <div className="intro-center">
-              <div className="intro-avatar">
-                <img src={`${assetBase}img/avatar.png`} alt={entry.name} />
+            <div className="relative mx-2 flex h-[clamp(380px,60vh,700px)] w-[clamp(260px,42vw,520px)] flex-none items-end justify-center self-end sm:h-[clamp(600px,72vh,680px)] sm:w-[clamp(300px,46vw,560px)]">
+              <div className="relative z-[2] h-full w-full overflow-hidden">
+                <img
+                  src={`${assetBase}img/avatar.png`}
+                  alt={entry.name}
+                  className="block h-full w-full object-cover object-top"
+                />
               </div>
             </div>
 
             {/* Right: fixed width, closer to the center */}
-            <div className="intro-side hidden md:flex flex-none w-[180px] lg:w-[220px] items-center justify-start pb-3">
+            <div className="hidden md:flex h-[clamp(360px,68vh,620px)] flex-none w-[180px] items-center justify-start pb-3 lg:w-[220px] sm:h-[clamp(420px,70vh,660px)]">
               <div className="whitespace-nowrap text-[12px] md:text-[13px] uppercase tracking-[0.35em] text-[var(--accent2)] text-left">
                 {entry.roleLine}
               </div>

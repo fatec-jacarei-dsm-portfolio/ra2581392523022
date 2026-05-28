@@ -6,8 +6,12 @@ export default function About({ lang }) {
   const stats = copy.origin.stats;
 
   return (
-    <section className="sec" id="origem" aria-label={copy.sections.origin}>
-      <div className="wrap">
+    <section
+      className="relative z-[2] flex min-h-screen flex-col justify-center overflow-hidden bg-[var(--bg)] pb-[100px] pt-0 will-change-transform"
+      id="origem"
+      aria-label={copy.sections.origin}
+    >
+      <div className="relative z-[2] mx-auto max-w-[1100px] px-[60px] max-[900px]:px-6">
         <p className="s-tag rv" data-n="01">
           {copy.sections.origin}
         </p>
