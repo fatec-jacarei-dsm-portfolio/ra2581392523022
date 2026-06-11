@@ -750,29 +750,39 @@ a {
 }
 
 
+/* O container do título (02 MISSÕES) */
 .s-tag {
-      font-family: "Unbounded", sans-serif;
+      display: flex;
+      align-items: center;
+      /* ISSO É CRÍTICO: Impede que a linha estique para cima/baixo */
+      font-family: 'Unbounded', monospace;
+      /* ou a fonte que estiver usando */
       font-size: 9px;
       letter-spacing: 5px;
       text-transform: uppercase;
       color: var(--accent2);
+      /* ou var(--accent) para amarelo */
       margin-bottom: 44px;
-      display: flex;
-      align-items: center;
       gap: 14px;
+      /* Espaço entre o texto e a linha */
 }
 
+/* O número "02" antes do texto */
 .s-tag::before {
       content: attr(data-n);
       color: var(--text3);
       font-size: 8px;
 }
 
+/* A LINHA AO LADO DO TEXTO */
 .s-tag::after {
-      content: "";
+      content: '';
       flex: 0 0 32px;
-      height: 100px;
+      /* O 32px controla o COMPRIMENTO da linha. Pode aumentar se quiser ela mais longa */
+      height: 1px;
+      /* AQUI ESTÁ A ESPESSURA! Garanta que está 1px (ou até 0.5px) */
       background: var(--accent2);
+      /* Cor da linha */
       opacity: 0.4;
 }
 
@@ -981,15 +991,14 @@ a {
 .cp {
       position: relative;
       overflow: hidden;
-      min-height: 300px;
-      background: linear-gradient(160deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0)), var(--bg3);
+      min-height: 320px;
+      background: var(--bg3);
       display: flex;
-      align-items: stretch;
+      flex-direction: column;
+      /* Mobile: imagem em cima, texto embaixo */
       cursor: crosshair;
-      transition: border-color 0.25s;
-      border: 2px solid var(--border2);
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
-      filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.38));
+      transition: border-color .25s;
+      border: 1px solid var(--border);
       text-decoration: none;
       color: inherit;
 }
@@ -1018,9 +1027,7 @@ a {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.75;
-      transform: scale(1.01);
-      filter: saturate(1.1) contrast(1.05);
+      transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .cp:hover {
@@ -1028,13 +1035,7 @@ a {
 }
 
 .cp::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 3px;
-      z-index: 3;
+      display: none;
 }
 
 .cp:nth-child(1)::before {
@@ -1062,12 +1063,7 @@ a {
 }
 
 .cp-clip {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      transition: background 0.3s;
-      background: linear-gradient(160deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04), inset 0 0 30px rgba(0, 0, 0, 0.35);
+      display: none;
 }
 
 .cp-clip::before {
@@ -1101,6 +1097,30 @@ a {
 
 /* Apply actual panel clip-paths to the .cp container so the whole panel has a comic-like shape */
 @media (min-width: 768px) {
+
+      .cp {
+            flex-direction: row;
+      }
+
+      .cp:nth-child(even) {
+            flex-direction: row-reverse;
+      }
+
+      .cp-media {
+            width: 45%;
+            /* Define o espaço da imagem no desktop (45%) */
+            height: auto;
+            border-bottom: none;
+      }
+
+      .cp:nth-child(odd) .cp-media {
+            border-right: 1px solid var(--border);
+      }
+
+      .cp:nth-child(even) .cp-media {
+            border-left: 1px solid var(--border);
+      }
+
       .cp:nth-child(1) {
             clip-path: polygon(0 0, 100% 0, 100% 78%, 0 100%);
       }
@@ -1132,12 +1152,13 @@ a {
 
 .cp-body {
       position: relative;
-      z-index: 3;
+      z-index: 2;
       display: flex;
-      align-items: flex-end;
+      flex-direction: column;
       justify-content: space-between;
+      /* Empurra o ano/seta para o final */
       width: 100%;
-      padding: 36px 52px;
+      padding: 36px 40px;
 }
 
 .cp-num {
@@ -1187,9 +1208,11 @@ a {
 
 .cp-r {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 10px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 32px;
+      width: 100%;
 }
 
 .cp-yr {
@@ -1218,6 +1241,11 @@ a {
       background: var(--accent2);
       border-color: var(--accent2);
       color: #fff;
+}
+
+.cp:hover .cp-media img {
+      transform: scale(1.06);
+      /* Efeito de zoom suave ao passar o mouse */
 }
 
 .pd-gallery {
@@ -1568,12 +1596,15 @@ a {
       }
 
       .cp-media {
-            position: relative;
-            top: 0;
-            right: 0;
             width: 100%;
-            height: 180px;
-            margin-bottom: 12px;
+            height: 240px;
+            /* Altura fixa no mobile */
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg2);
+            /* Fundo caso a imagem não carregue */
       }
 
       .ct-w {
