@@ -100,12 +100,12 @@
       "contribution": "Desenvolvi a interface utilizando Tailwind CSS e cuidei de grande parte da lógica de rotas no Laravel.",
       "aria": "Missão 003 - ver estudo de caso"
     },
-    {
+{
       "mission": "missao 004",
       "titleLines": ["LABORATÓRIO", "AGRISLAB"],
       "desc": "Plataforma web com CRUD de notícias e projetos para o laboratório Agrislab do INPE. — 1º Semestre da Faculdade",
-      "detail": "Meu maior desafio aqui foi atuar como desenvolvedor e também tutor técnico para o grupo. Desenvolvi boa parte do Front-end, os scripts e estruturei o banco com PostgreSQL. O sistema ficou bonito, funcional e garantiu o 3º lugar na apresentação, com grande foco em boas práticas de documentação.",
-      "contribution": "Atuei no Front-end, programação de scripts e estruturei completamente o banco de dados em PostgreSQL.",
+      "detail": "Este projeto consistiu na criação de uma plataforma web robusta para gerenciar o CRUD de notícias e projetos do laboratório Agrislab do INPE...",
+      "contribution": "Atuei diretamente no desenvolvimento do Front-end, sendo responsável pela criação das interfaces, componentização de elementos da tela e implementação da responsividade. Além disso, desenvolvi scripts dinâmicos utilizando JavaScript nativo.",
       "aria": "Missão 004 - ver estudo de caso"
     },
     {
@@ -140,12 +140,12 @@
       "contribution": "Foquei no núcleo de performance: fui o responsável por estruturar a indexação dos arquivos e pela implementação manual e otimização dos algoritmos de ordenação e busca.",
       "aria": "Missão 008 - ver estudo de caso"
     },
-    {
+{
       "mission": "missao 009",
       "titleLines": ["FATEC", "BOT"],
       "desc": "Um chatbot robusto para a secretaria da FATEC, focado em alta qualidade e arquitetura. — 2º Semestre da Faculdade",
-      "detail": "Meu primeiro grande projeto focado em Back-end, lidando com autenticação e conteinerização. Usamos um stack moderno (React, TS, Docker, PostgreSQL) e elevamos o nível na documentação com modelagem de dados. A entrega da primeira sprint já rendeu o topo da turma.",
-      "contribution": "Foquei no Back-end, lidando com Docker (conteinerização), autenticação e modelagem de dados no PostgreSQL.",
+      "detail": "Meu primeiro grande projeto focado em Back-end, lidando com autenticação e conteinerização...",
+      "contribution": "Foquei na arquitetura do Back-end, onde implementei middlewares personalizados, criptografia de senhas e toda a estrutura lógica do CRUD de nós. No Front-end, colaborei ativamente construindo os elementos visuais da tela do chatbot e refinando a responsividade geral do layout.",
       "aria": "Missão 009 - ver estudo de caso"
     }
   ],

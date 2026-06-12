@@ -100,12 +100,12 @@
       "contribution": "Developed the interface using Tailwind CSS and handled most of the PHP routing logic in Laravel.",
       "aria": "Mission 003 - view case study"
     },
-    {
+{
       "mission": "mission 004",
       "titleLines": ["INPE", "LABORATORY"],
       "desc": "Web platform with a news and projects CRUD for INPE's Agrislab laboratory. — 1st Semester (College)",
-      "detail": "My biggest challenge here was acting as both a developer and technical tutor for the group. I built most of the Front-end, the scripts, and structured the database with PostgreSQL. The system turned out beautiful and functional, securing 3rd place in the presentation, with a strong focus on documentation best practices.",
-      "contribution": "Worked on the Front-end, script programming, and completely structured the PostgreSQL database.",
+      "detail": "This project involved creating a robust web platform to manage the news and projects CRUD for INPE's Agrislab laboratory...",
+      "contribution": "I worked directly on Front-end development, responsible for UI creation, componentizing screen elements, and implementing responsiveness. Additionally, I developed dynamic scripts using native JavaScript.",
       "aria": "Mission 004 - view case study"
     },
     {
@@ -140,12 +140,12 @@
       "contribution": "I focused on the performance core: I was responsible for structuring the file indexing and manually implementing and optimizing the sorting and search algorithms.",
       "aria": "Mission 008 - view case study"
     },
-    {
+{
       "mission": "mission 009",
       "titleLines": ["FATEC", "BOT"],
       "desc": "A robust chatbot for the FATEC secretariat, focused on high quality and architecture. — 2nd Semester (College)",
-      "detail": "My first major Back-end focused project, dealing with authentication and containerization. We used a modern stack (React, TS, Docker, PostgreSQL) and raised the bar on documentation with data modeling. The first sprint delivery already earned us the top spot in the class.",
-      "contribution": "Focused on the Back-end, handling Docker (containerization), authentication, and data modeling in PostgreSQL.",
+      "detail": "My first major Back-end focused project, dealing with authentication and containerization...",
+      "contribution": "I focused on Back-end architecture, where I implemented custom middlewares, password encryption, and the entire logical structure of the node CRUD. On the Front-end, I actively collaborated by building the visual elements of the chatbot screen and refining the layout's overall responsiveness.",
       "aria": "Mission 009 - view case study"
     }
   ],
