@@ -12,8 +12,10 @@
       --bg2: #11112a;
       --bg3: #181836;
       --text: #eae4ff;
-      --text2: #7070aa;
-      --text3: #44446a;
+      --text2: #a5a5d6;
+      /* Mais claro, tom pastel de roxo/azul */
+      --text3: #7b7bb3;
+      /* Clareado o suficiente para ler no fundo escuro */
       --border: rgba(255, 255, 255, 0.07);
       --border2: rgba(255, 255, 255, 0.14);
       --accent: #efe01e;
@@ -833,8 +835,10 @@ a {
       right: 12px;
       font-family: "Unbounded", sans-serif;
       font-size: 90px;
-      color: var(--text);
-      opacity: 0.03;
+      color: var(--text3);
+      /* Mudou de var(--text) para var(--text3) */
+      opacity: 0.15;
+      /* Aumentado de 0.03 para dar leitura */
       line-height: 1;
       pointer-events: none;
 }
@@ -911,12 +915,14 @@ a {
 }
 
 /* Ensure the missions section tag aligns to the left like other sections */
+/* COMO ESTÁ AGORA: */
+/* COMO DEVE FICAR: */
 #missoes .wrap {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      margin-left: 0;
-      margin-right: auto;
+      align-items: stretch;
+      /* <-- Altera para stretch para esticar as categorias a 100% */
+      width: 100%;
 }
 
 #missoes .s-tag {
@@ -980,12 +986,13 @@ a {
       }
 }
 
-
-
 .panels {
-      display: grid;
-      gap: 28px;
-      padding-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      /* Coloca um projeto embaixo do outro */
+      gap: 48px;
+      /* O espaço entre um projeto e outro, pode aumentar se quiser */
+      width: 100%;
 }
 
 .cp {
@@ -995,25 +1002,24 @@ a {
       background: var(--bg3);
       display: flex;
       flex-direction: column;
-      /* Mobile: imagem em cima, texto embaixo */
-      cursor: crosshair;
+      cursor: pointer;
       transition: border-color .25s;
       border: 1px solid var(--border);
       text-decoration: none;
       color: inherit;
+      width: 100%;
+      /* ADICIONE ESTA LINHA */
 }
 
 .cp-media {
-      position: absolute;
-      top: 22px;
-      right: 22px;
-      width: clamp(140px, 18vw, 200px);
-      height: clamp(92px, 12vw, 140px);
+      position: relative;
+      /* O SEGREDO ESTÁ AQUI: Tira o absolute antigo! */
+      width: 100%;
+      height: 240px;
       z-index: 2;
       overflow: hidden;
-      border: 1px solid var(--border2);
       background: var(--bg3);
-      pointer-events: none;
+      flex-shrink: 0;
 }
 
 .cp-media::after {
@@ -1185,7 +1191,8 @@ a {
       font-size: 14px;
       color: var(--text2);
       margin-top: 8px;
-      max-width: 360px;
+      max-width: 100%;
+      /* APAGUE O 360px! Isso vai deixar o texto respirar */
       line-height: 1.5;
 }
 
@@ -1220,7 +1227,8 @@ a {
       font-size: 44px;
       letter-spacing: 4px;
       color: var(--text);
-      opacity: 0.07;
+      opacity: 0.25;
+      /* Aumentado de 0.07 para 0.25 para melhorar a leitura */
       line-height: 1;
 }
 
@@ -1440,7 +1448,8 @@ a {
       font-size: 260px;
       letter-spacing: 40px;
       color: #fff;
-      opacity: 0.018;
+      opacity: 0.06;
+      /* Aumentado de 0.018 para 0.06 para aparecer melhor */
       line-height: 1;
       white-space: nowrap;
       pointer-events: none;

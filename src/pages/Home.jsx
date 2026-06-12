@@ -79,7 +79,7 @@ export default function Home({ lang, onToggleLang }) {
         welcomeText={copy.loader.welcome}
       />
       <Header lang={lang} onToggleLang={onToggleLang} />
-      <HireMe lang={lang} link={contactInfo.whatsapp} />
+      <HireMe lang={lang} link={contactInfo.linkedin} />
 
       <main className="relative z-[1]">
         <Intro lang={lang} />

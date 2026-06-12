@@ -27,6 +27,11 @@
     "missions": "Missões",
     "arsenal": "Arsenal"
   },
+  "categories": {
+    "academic": "Acadêmicos",
+    "professional": "Profissionais",
+    "personal": "Pessoais"
+  },
   "origin": {
     "cards": [
       {
@@ -39,7 +44,7 @@
       },
       {
         "line1": "Estruturo soluções escaláveis",
-        "line2Prefix": "e eficientes que transformam lógica em ",
+        "line2Prefix": " e eficientes que transformam lógica em ",
         "highlight": "impacto real.",
         "line2Suffix": "",
         "subtitle": "Back-end",
@@ -69,53 +74,85 @@
       { "value": "Fé", "label": "mantém meus pés no chão" }
     ]
   },
+  
   "projects": [
     {
       "mission": "missao 001",
       "titleLines": ["FICTION", "CORPORATION"],
-      "desc": "Um catálogo web de filmes de ficção científica e meu primeiro grande mergulho no desenvolvimento.",
+      "desc": "Um catálogo web de filmes de ficção científica e meu primeiro grande mergulho no desenvolvimento. — 2º Semestre do Curso Técnico",
       "detail": "Desenvolvido no SENAI, atuei como Scrum Master e líder técnico focado no Front-end. Apesar do desafio de aprender enquanto construía, entregamos um sistema responsivo com HTML, CSS, JS, PHP e MySQL. O projeto tirou nota 10 e conquistou o 2º lugar da turma, superando todas as expectativas iniciais.",
-      "aria": "Missao 001 - ver estudo de caso"
+      "contribution": "Atuei como Scrum Master e líder técnico focado no Front-end. Estruturei a responsividade e a conexão com o banco de dados.",
+      "aria": "Missão 001 - ver estudo de caso"
     },
     {
       "mission": "missao 002",
       "titleLines": ["KOMODO"],
-      "desc": "Sistema web para gestão de tickets de manutenção com múltiplos perfis de acesso.",
+      "desc": "Sistema web para gestão de tickets de manutenção com múltiplos perfis de acesso. — 3º Semestre do Curso Técnico",
       "detail": "O grande desafio foi lidar com a lógica de 4 tipos de usuários enquanto eu ainda aprendia o Back-end. Fiquei responsável pela interface, responsividade e banco de dados. O resultado? Um projeto tão funcional e visualmente agradável que foi eleito o melhor da sala e cotado para uso oficial no próprio SENAI.",
-      "aria": "Missao 002 - ver estudo de caso"
+      "contribution": "Fiquei responsável por toda a interface, responsividade e modelagem/criação do banco de dados.",
+      "aria": "Missão 002 - ver estudo de caso"
     },
     {
       "mission": "missao 003",
       "titleLines": ["SECRETARIA", "SENAI"],
-      "desc": "Nosso TCC e primeiro projeto com cliente real: digitalizando a secretaria do SENAI.",
+      "desc": "Nosso TCC e primeiro projeto com cliente real: digitalizando a secretaria do SENAI. — 4º Semestre do Curso Técnico",
       "detail": "Com uma equipe de apenas 4 pessoas, a complexidade foi altíssima. Usei Laravel e Tailwind para criar a interface e mergulhei fundo em rotas PHP. Entregamos um sistema completo que tirou nota máxima e foi aprovado pelo cliente, sendo um salto técnico imenso para todos.",
-      "aria": "Missao 003 - ver estudo de caso"
+      "contribution": "Desenvolvi a interface utilizando Tailwind CSS e cuidei de grande parte da lógica de rotas no Laravel.",
+      "aria": "Missão 003 - ver estudo de caso"
     },
     {
       "mission": "missao 004",
-      "titleLines": ["LABORATÓRIO", "AGRIRSLAB"],
-      "desc": "Plataforma web com CRUD de notícias e projetos para o laboratório Agrirslab do INPE.",
+      "titleLines": ["LABORATÓRIO", "AGRISLAB"],
+      "desc": "Plataforma web com CRUD de notícias e projetos para o laboratório Agrislab do INPE. — 1º Semestre da Faculdade",
       "detail": "Meu maior desafio aqui foi atuar como desenvolvedor e também tutor técnico para o grupo. Desenvolvi boa parte do Front-end, os scripts e estruturei o banco com PostgreSQL. O sistema ficou bonito, funcional e garantiu o 3º lugar na apresentação, com grande foco em boas práticas de documentação.",
-      "aria": "Missao 004 - ver estudo de caso"
+      "contribution": "Atuei no Front-end, programação de scripts e estruturei completamente o banco de dados em PostgreSQL.",
+      "aria": "Missão 004 - ver estudo de caso"
     },
     {
       "mission": "missao 005",
       "titleLines": ["PORTFOLIO"],
       "desc": "Onde você está agora. Construído em apenas uma semana com foco em design e performance.",
       "detail": "Cansado do básico, decidi me desafiar usando React e Tailwind para criar esta landing page do zero. O maior obstáculo foi o tempo curto para implementar todas as animações sozinho, mas o resultado final é, de longe, a interface mais ousada e bonita que já desenvolvi.",
-      "aria": "Missao 005 - ver estudo de caso"
+      "contribution": "Projeto individual. Fui responsável por 100% do design, desenvolvimento em React, integrações GSAP e deploy.",
+      "aria": "Missão 005 - ver estudo de caso"
+    },
+{
+      "mission": "missao 006",
+      "titleLines": ["FOCOS DE", "INCÊNDIO"],
+      "desc": "Script em Python para processamento e análise de dados sobre focos de incêndio. — 2º Semestre da Faculdade",
+      "detail": "Desenvolvido como um desafio imposto pelo professor, o projeto foca no processamento de grandes volumes de dados a partir de arquivos CSV (especificamente focos de incêndio em São Paulo). O objetivo central foi aplicar lógica de programação estruturada e manipulação pesada de arquivos utilizando Python puro.",
+      "contribution": "Trabalhei ativamente no desenvolvimento do código em Python, dividindo a lógica, a leitura do CSV e a estruturação dos dados de forma igualitária com meu parceiro de equipe.",
+      "aria": "Missão 006 - ver estudo de caso"
     },
     {
-      "mission": "missao 006",
+      "mission": "missao 007",
+      "titleLines": ["OCEAN", "CLEAN"],
+      "desc": "Jogo web com temática ambiental criado para testar as capacidades e limites do desenvolvimento guiado por IA. — 2º Semestre da Faculdade",
+      "detail": "Com o tema de limpeza dos oceanos, o principal objetivo deste projeto foi explorar o potencial da Inteligência Artificial Generativa na programação. Controlamos e direcionamos a IA para estruturar o código base do jogo, focando em alinhar a geração algorítmica com a experiência de gameplay desejada.",
+      "contribution": "Liderei a parte criativa e visual do projeto. Fui o responsável pela concepção das ideias, direção de arte, design de interface e toda a modelagem dos personagens do jogo.",
+      "aria": "Missão 007 - ver estudo de caso"
+    },
+    {
+      "mission": "missao 008",
+      "titleLines": ["MINI", "BANCO DE DADOS"],
+      "desc": "Motor de banco de dados construído do zero em TypeScript para busca ultrarrápida em 10 milhões de registros. — 2º Semestre da Faculdade",
+      "detail": "Simula um SGBD relacional manipulando arquivos binários em baixo nível. O maior desafio foi evitar o estouro de memória (RAM) lidando com 3 GB de dados brutos, solucionado com paginação manual, leitura por offsets exatos e uma API HTTP nativa acoplada a um front-end Vanilla JS ágil.",
+      "contribution": "Foquei no núcleo de performance: fui o responsável por estruturar a indexação dos arquivos e pela implementação manual e otimização dos algoritmos de ordenação e busca.",
+      "aria": "Missão 008 - ver estudo de caso"
+    },
+    {
+      "mission": "missao 009",
       "titleLines": ["FATEC", "BOT"],
-      "desc": "Um chatbot robusto para a secretaria da FATEC, focado em alta qualidade e arquitetura.",
+      "desc": "Um chatbot robusto para a secretaria da FATEC, focado em alta qualidade e arquitetura. — 2º Semestre da Faculdade",
       "detail": "Meu primeiro grande projeto focado em Back-end, lidando com autenticação e conteinerização. Usamos um stack moderno (React, TS, Docker, PostgreSQL) e elevamos o nível na documentação com modelagem de dados. A entrega da primeira sprint já rendeu o topo da turma.",
-      "aria": "Missao 006 - ver estudo de caso"
+      "contribution": "Foquei no Back-end, lidando com Docker (conteinerização), autenticação e modelagem de dados no PostgreSQL.",
+      "aria": "Missão 009 - ver estudo de caso"
     }
-],
+  ],
+
   "skills": {
     "soft": [
-      "Comunicacao clara",
+      "Comunicação clara",
       "Resolução de problemas",
       "Colaboração",
       "Planejamento",
@@ -153,8 +190,9 @@
     "live": "Live",
     "repo": "Repo",
     "noLinks": "Links sob consulta",
-    "back": "Voltar para inicio",
-    "notFoundTitle": "Projeto nao encontrado",
-    "notFoundBody": "O projeto que voce procura ainda nao esta disponivel."
+    "back": "Voltar para o início",
+    "notFoundTitle": "Projeto não encontrado",
+    "notFoundBody": "O projeto que você procura ainda não está disponível.",
+    "contributionTitle": "Contribuição Pessoal"
   }
 }

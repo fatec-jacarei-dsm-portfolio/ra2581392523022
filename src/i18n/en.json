@@ -27,6 +27,11 @@
     "missions": "Missions",
     "arsenal": "Arsenal"
   },
+  "categories": {
+    "academic": "Academic",
+    "professional": "Professional",
+    "personal": "Personal"
+  },
   "origin": {
     "cards": [
       {
@@ -49,7 +54,7 @@
         "line1": "Well-organized data are",
         "line2Prefix": "",
         "highlight": "the foundation",
-        "line2Suffix": "of intelligent, performant, reliable systems.",
+        "line2Suffix": " of intelligent, performant, reliable systems.",
         "subtitle": "Database",
         "accent": "primary"
       },
@@ -57,7 +62,7 @@
         "line1": "",
         "line2Prefix": "",
         "highlight": "Constant learning,",
-        "line2Suffix": "technical curiosity and a will to build solutions that really matter.",
+        "line2Suffix": " technical curiosity and a will to build solutions that really matter.",
         "subtitle": "Learning",
         "accent": "alt"
       }
@@ -69,33 +74,38 @@
       { "value": "Faith", "label": "keeps my feet on the ground" }
     ]
   },
-  "projects": [
+
+"projects": [
     {
       "mission": "mission 001",
       "titleLines": ["FICTION", "CORPORATION"],
-      "desc": "A web catalog of sci-fi movies and my first deep dive into development.",
+      "desc": "A web catalog of sci-fi movies and my first deep dive into development. — 2nd Semester (Technical Course)",
       "detail": "Developed at SENAI, I acted as Scrum Master and technical lead focused on the Front-end. Despite the challenge of learning while building, we delivered a responsive system with HTML, CSS, JS, PHP, and MySQL. The project got a perfect 10 and won 2nd place in the class, exceeding all initial expectations.",
+      "contribution": "Acted as Scrum Master and Front-end technical lead. Structured the responsiveness and database connection.",
       "aria": "Mission 001 - view case study"
     },
     {
       "mission": "mission 002",
       "titleLines": ["KOMODO"],
-      "desc": "Web system for maintenance ticket management with multiple access profiles.",
+      "desc": "Web system for maintenance ticket management with multiple access profiles. — 3rd Semester (Technical Course)",
       "detail": "The main challenge was handling the logic for 4 user types while I was still learning the Back-end. I was responsible for the interface, responsiveness, and database. The result? A project so functional and visually appealing that it was voted the best in the class and considered for official use at SENAI itself.",
+      "contribution": "Responsible for the entire interface, responsiveness, and database modeling/creation.",
       "aria": "Mission 002 - view case study"
     },
     {
       "mission": "mission 003",
       "titleLines": ["SECRETARIA", "SENAI"],
-      "desc": "Our capstone project and first real-client work: digitizing the SENAI secretariat.",
+      "desc": "Our capstone project and first real-client work: digitizing the SENAI secretariat. — 4th Semester (Technical Course)",
       "detail": "With a team of just 4 people, the complexity was extremely high. I used Laravel and Tailwind to build the interface and dove deep into PHP routing. We delivered a complete system that achieved top marks and was approved by the client, marking a massive technical leap for us all.",
+      "contribution": "Developed the interface using Tailwind CSS and handled most of the PHP routing logic in Laravel.",
       "aria": "Mission 003 - view case study"
     },
     {
       "mission": "mission 004",
       "titleLines": ["INPE", "LABORATORY"],
-      "desc": "Web platform with a news and projects CRUD for INPE's Agrislab laboratory.",
+      "desc": "Web platform with a news and projects CRUD for INPE's Agrislab laboratory. — 1st Semester (College)",
       "detail": "My biggest challenge here was acting as both a developer and technical tutor for the group. I built most of the Front-end, the scripts, and structured the database with PostgreSQL. The system turned out beautiful and functional, securing 3rd place in the presentation, with a strong focus on documentation best practices.",
+      "contribution": "Worked on the Front-end, script programming, and completely structured the PostgreSQL database.",
       "aria": "Mission 004 - view case study"
     },
     {
@@ -103,28 +113,55 @@
       "titleLines": ["PORTFOLIO"],
       "desc": "Where you are right now. Built in just one week with a focus on design and performance.",
       "detail": "Tired of the basics, I decided to challenge myself by using React and Tailwind to build this landing page from scratch. The biggest hurdle was the short timeframe to implement all the animations alone, but the final result is by far the boldest and most beautiful interface I've ever developed.",
+      "contribution": "Solo project. Responsible for 100% of the design, React development, GSAP integrations, and deployment.",
       "aria": "Mission 005 - view case study"
     },
-    {
+{
       "mission": "mission 006",
-      "titleLines": ["FATEC", "BOT"],
-      "desc": "A robust chatbot for the FATEC secretariat, focused on high quality and architecture.",
-      "detail": "My first major Back-end focused project, dealing with authentication and containerization. We used a modern stack (React, TS, Docker, PostgreSQL) and raised the bar on documentation with data modeling. The first sprint delivery already earned us the top spot in the class.",
+      "titleLines": ["FIRE", "OUTBREAKS"],
+      "desc": "Python script for processing and analyzing fire outbreak datasets. — 2nd Semester (College)",
+      "detail": "Developed as a professor's challenge, the project focuses on processing large volumes of data from CSV files (specifically fire outbreaks in São Paulo). The main goal was applying structured programming logic and heavy file manipulation using pure Python.",
+      "contribution": "I actively worked on writing the Python code, equally splitting the logic structuring, CSV parsing, and data handling with my teammate.",
       "aria": "Mission 006 - view case study"
+    },
+    {
+      "mission": "mission 007",
+      "titleLines": ["OCEAN", "CLEAN"],
+      "desc": "Environment-themed web game built to test the capabilities and limits of AI-driven development. — 2nd Semester (College)",
+      "detail": "Themed around ocean conservation, the main objective was exploring Generative AI's potential in programming. We controlled and guided the AI to structure the game's core codebase, focusing on aligning the algorithmic generation with the desired gameplay experience.",
+      "contribution": "I led the creative and visual aspects of the project. I was responsible for brainstorming ideas, art direction, UI design, and modeling all the game characters.",
+      "aria": "Mission 007 - view case study"
+    },
+    {
+      "mission": "mission 008",
+      "titleLines": ["MINI", "DATABASE"],
+      "desc": "Custom database engine built from scratch in TypeScript for ultra-fast searches across 10 million records. — 2nd Semester (College)",
+      "detail": "Simulates a relational DBMS by manipulating binary files at a low level. The biggest challenge was avoiding RAM overflow while handling 3 GB of raw data, solved with manual pagination, exact offset reading, and a native HTTP API paired with a snappy Vanilla JS front-end.",
+      "contribution": "I focused on the performance core: I was responsible for structuring the file indexing and manually implementing and optimizing the sorting and search algorithms.",
+      "aria": "Mission 008 - view case study"
+    },
+    {
+      "mission": "mission 009",
+      "titleLines": ["FATEC", "BOT"],
+      "desc": "A robust chatbot for the FATEC secretariat, focused on high quality and architecture. — 2nd Semester (College)",
+      "detail": "My first major Back-end focused project, dealing with authentication and containerization. We used a modern stack (React, TS, Docker, PostgreSQL) and raised the bar on documentation with data modeling. The first sprint delivery already earned us the top spot in the class.",
+      "contribution": "Focused on the Back-end, handling Docker (containerization), authentication, and data modeling in PostgreSQL.",
+      "aria": "Mission 009 - view case study"
     }
-],
+  ],
+
   "skills": {
     "soft": [
-"Clear communication",
-"Problem-solving",
-"Collaboration",
-"Planning",
-"Consistent delivery"
+      "Clear communication",
+      "Problem-solving",
+      "Collaboration",
+      "Planning",
+      "Consistent delivery"
     ],
     "clientsLabel": "Education",
     "clients": [
       "Systems Development (Technical) - SENAI SP",
-      "Multiplatform Software Development - FATEC Jacarei (in progress)"
+      "Multiplatform Software Development - FATEC Jacareí (in progress)"
     ]
   },
   "contact": {
@@ -136,14 +173,14 @@
     "ctaGithub": "GitHub",
     "ctaResume": "Resume",
     "locationLabel": "Location",
-    "location": "Jacarei",
+    "location": "Jacareí",
     "statusLabel": "Status",
     "status": "Available",
     "replyLabel": "Reply in",
     "reply": "< 24h",
     "footerLeft": "2026 Cecon",
     "footerMid": "Built with obsession",
-    "footerRight": "Jacarei - Brasil"
+    "footerRight": "Jacareí - Brasil"
   },
   "projectDetail": {
     "tag": "Case",
@@ -155,6 +192,7 @@
     "noLinks": "Links on request",
     "back": "Back to home",
     "notFoundTitle": "Project not found",
-    "notFoundBody": "The project you are looking for is not available yet."
+    "notFoundBody": "The project you are looking for is not available yet.",
+    "contributionTitle": "Personal Contribution"
   }
 }

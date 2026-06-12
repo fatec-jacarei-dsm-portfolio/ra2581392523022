@@ -30,21 +30,14 @@ export default function Contact({ lang }) {
             ))}
           </h2>
           <div className="ct-ls">
+            {/* LinkedIn agora assume o papel de CTA principal destacado com a seta */}
             <a
               className="ct-l p"
-              href={contactInfo.emailLink}
-              target="_blank"
-              rel="noopener"
-            >
-              {copy.contact.ctaEmail}
-            </a>
-            <a
-              className="ct-l"
               href={contactInfo.linkedin}
               target="_blank"
               rel="noopener"
             >
-              {copy.contact.ctaLinkedIn}
+              {copy.contact.ctaLinkedIn} →
             </a>
             <a
               className="ct-l"
@@ -67,10 +60,6 @@ export default function Contact({ lang }) {
           <span style={{ marginTop: "12px" }}>{copy.contact.statusLabel}</span>
           <span>
             <strong>{copy.contact.status}</strong>
-          </span>
-          <span style={{ marginTop: "12px" }}>{copy.contact.replyLabel}</span>
-          <span>
-            <strong>{copy.contact.reply}</strong>
           </span>
         </div>
       </div>

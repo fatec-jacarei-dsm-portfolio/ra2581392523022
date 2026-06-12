@@ -11,6 +11,117 @@ export default function Projects({ lang }) {
   const panelsRef = useRef(null);
   useProjectsReveal(panelsRef);
 
+  // Agrupar os projetos pelas categorias
+  const groupedProjects = {
+    academic: [],
+    professional: [],
+    personal: [],
+  };
+
+  projects.forEach((proj, index) => {
+    // Passamos o index original para encontrar a tradução correta
+    const projectCopy = items?.[index];
+    if (groupedProjects[proj.category]) {
+      // Salva o originalIndex para a numeração (01, 02) continuar correta
+      groupedProjects[proj.category].push({
+        ...proj,
+        projectCopy,
+        originalIndex: index,
+      });
+    }
+  });
+
+  // Função auxiliar para renderizar cada secção de categoria
+  const renderCategory = (categoryKey, title) => {
+    const categoryProjects = groupedProjects[categoryKey];
+    if (categoryProjects.length === 0) return null; // Não desenha se estiver vazio
+
+    return (
+      <div className="mb-16" key={categoryKey}>
+        {/* Título da Categoria */}
+        <h3
+          className="text-xl tracking-widest uppercase mb-6"
+          style={{
+            color: "var(--accent)",
+            fontFamily: "'Unbounded', sans-serif",
+            fontSize: "14px",
+          }}
+        >
+          {title}
+        </h3>
+
+        <div className="panels rv" role="list">
+          {categoryProjects.map((project) => {
+            const projectCopy = project.projectCopy;
+            const titleLines = projectCopy?.titleLines ?? [
+              projectCopy?.title ?? "",
+              "",
+            ];
+
+            return (
+              <Link
+                key={project.slug}
+                className="cp"
+                to={`/projects/${project.slug}`}
+                role="listitem"
+                aria-label={projectCopy?.aria}
+              >
+                {/* HTML ORIGINAL DO SEU CARD INTACTO ABAIXO */}
+                <div className="cp-clip" aria-hidden="true"></div>
+                <div className="cp-body">
+                  <div>
+                    <div className="cp-num" aria-hidden="true">
+                      {String(project.originalIndex + 1).padStart(2, "0")}
+                    </div>
+                    <h3 className="cp-name">
+                      {titleLines.map((line, i) => (
+                        <span key={i}>
+                          {line}
+                          {i < titleLines.length - 1 && <br />}
+                        </span>
+                      ))}
+                    </h3>
+                    {/* Aqui está a descrição que eu tinha apagado sem querer! */}
+                    <p className="cp-desc">{projectCopy?.desc}</p>
+                    <div className="cp-tags">
+                      {project.tags.map((tag) => (
+                        <span key={tag} className="cp-tag">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="cp-r">
+                    <span className="cp-yr">{project.year}</span>
+                    <div className="cp-arr" aria-hidden="true">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div className="cp-media">
+                  <img
+                    src={project.cover}
+                    alt={titleLines.join(" ")}
+                    loading="lazy"
+                  />
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    );
+  };
+
   return (
     <section
       className="sec"
@@ -23,62 +134,20 @@ export default function Projects({ lang }) {
           {copy.sections.missions}
         </p>
       </div>
-      <div className="panels rv" role="list" ref={panelsRef}>
-        {projects.map((project, index) => {
-          const projectCopy = items?.[index];
-          const titleLines = projectCopy?.titleLines ?? [
-            projectCopy?.title ?? "",
-            "",
-          ];
-          return (
-            <Link
-              key={project.slug}
-              className="cp"
-              to={`/projects/${project.slug}`}
-              role="listitem"
-              aria-label={projectCopy?.aria}
-            >
-              {project.cover ? (
-                <div className="cp-media" aria-hidden="true">
-                  <img src={project.cover} alt="" loading="lazy" />
-                </div>
-              ) : null}
-              <div className="cp-clip" aria-hidden="true"></div>
-              <div className="cp-body">
-                <div>
-                  <div className="cp-num">{projectCopy?.mission}</div>
-                  <div className="cp-name">
-                    {titleLines[0]}
-                    <br />
-                    {titleLines[1]}
-                  </div>
-                  <div className="cp-desc">{projectCopy?.desc}</div>
-                  <div className="cp-tags">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="cp-tag">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div className="cp-r">
-                  <div className="cp-yr" aria-hidden="true">
-                    {project.year}
-                  </div>
-                  <div className="cp-arr" aria-hidden="true">
-                    -&gt;
-                  </div>
-                </div>
-              </div>
-            </Link>
-          );
-        })}
+
+      <div className="wrap" ref={panelsRef}>
+        {renderCategory("academic", copy.categories?.academic || "Acadêmicos")}
+        {renderCategory(
+          "professional",
+          copy.categories?.professional || "Profissionais",
+        )}
+        {renderCategory("personal", copy.categories?.personal || "Pessoais")}
       </div>
     </section>
   );
 }
 
-// Hook animations
+// Hook das animações
 function useProjectsReveal(ref) {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -112,11 +181,5 @@ function useProjectsReveal(ref) {
     }, ref);
 
     return () => ctx.revert();
-  }, [ref]);
+  }, []);
 }
-
-// wire the hook inside the component via ref
-// (exported component will call this automatically when rendered)
-// To avoid duplicate registrations, we call it here using a noop wrapper
-// The actual effect will run when the component is mounted.
-// (This file declares the hook but we still need to call it from the component.)

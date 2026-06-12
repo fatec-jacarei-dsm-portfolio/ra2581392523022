@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+import { useEffect } from "react";
 import Header from "../components/Header";
 import ScrollProgress from "../components/ScrollProgress";
 import { projects } from "../data/projects";
@@ -6,6 +7,9 @@ import { getDict, t } from "../i18n/i18n";
 
 export default function ProjectDetail({ lang, onToggleLang }) {
   const { slug } = useParams();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
   const copy = getDict(lang);
   const projectIndex = projects.findIndex((item) => item.slug === slug);
   const project = projectIndex >= 0 ? projects[projectIndex] : null;
@@ -50,6 +54,28 @@ export default function ProjectDetail({ lang, onToggleLang }) {
           {projectCopy.titleLines?.join(" ")}
         </h1>
         <p className="mt-4 text-lg text-[var(--text2)]">{projectCopy.detail}</p>
+
+        {/* CAIXA DE CONTRIBUIÇÃO PESSOAL */}
+        {projectCopy?.contribution && (
+          <div className="mt-10 p-8 border border-[var(--border2)] bg-[var(--bg2)] relative overflow-hidden">
+            {/* Efeito visual no canto da caixa */}
+            <div className="absolute top-0 left-0 w-1 h-full bg-[var(--accent)]"></div>
+
+            <h3
+              className="mb-4 text-xs uppercase tracking-[0.2em]"
+              style={{
+                color: "var(--accent)",
+                fontFamily: "'Unbounded', sans-serif",
+              }}
+            >
+              {t(lang, "projectDetail.contributionTitle")}
+            </h3>
+
+            <p className="text-[15px] leading-relaxed text-[var(--text)]">
+              {projectCopy.contribution}
+            </p>
+          </div>
+        )}
 
         <div className="mt-10 grid gap-6 border border-[var(--border)] bg-[var(--bg2)] p-6 md:grid-cols-3">
           <div>

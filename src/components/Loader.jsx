@@ -1,13 +1,23 @@
 import { useEffect, useState } from "react";
 
 export default function Loader({ messages, welcomeText }) {
-  const [text, setText] = useState(messages?.[0] ?? "");
-  const [done, setDone] = useState(false);
+  // 1. Verifica se a animação já rodou nesta sessão do navegador
+  const isLoaded = sessionStorage.getItem("cecon_loaded") === "true";
+
+  // 2. Se já foi executado, o estado inicial já começa no fim
+  const [text, setText] = useState(
+    isLoaded ? welcomeText : (messages?.[0] ?? ""),
+  );
+  const [done, setDone] = useState(isLoaded);
 
   useEffect(() => {
+    // 3. Se já rodou antes, bloqueia a execução dos timers de animação
+    if (isLoaded) return;
+
     if (!messages || messages.length === 0) {
       setText(welcomeText);
       setDone(true);
+      sessionStorage.setItem("cecon_loaded", "true");
       return undefined;
     }
 
@@ -23,7 +33,11 @@ export default function Loader({ messages, welcomeText }) {
     const doneTimer = setTimeout(() => {
       clearInterval(intervalId);
       setText(welcomeText);
-      hideTimer = setTimeout(() => setDone(true), 100);
+      hideTimer = setTimeout(() => {
+        setDone(true);
+        // 4. Salva a flag no navegador quando a animação termina pela primeira vez
+        sessionStorage.setItem("cecon_loaded", "true");
+      }, 100);
     }, 1200);
 
     return () => {
@@ -33,7 +47,10 @@ export default function Loader({ messages, welcomeText }) {
         clearTimeout(hideTimer);
       }
     };
-  }, [messages, welcomeText]);
+  }, [messages, welcomeText, isLoaded]);
+
+  // 5. O SEGREDO: Se já carregou, retorna "null" para remover a tela preta instantaneamente
+  if (isLoaded) return null;
 
   return (
     <div
@@ -67,19 +84,16 @@ export default function Loader({ messages, welcomeText }) {
           <circle cx="250" cy="250" r="244" />
           <line x1="250" y1="6" x2="250" y2="494" />
           <line x1="6" y1="250" x2="494" y2="250" />
-          <line x1="75" y1="75" x2="425" y2="425" />
-          <line x1="425" y1="75" x2="75" y2="425" />
-          <line x1="14" y1="165" x2="486" y2="335" />
-          <line x1="486" y1="165" x2="14" y2="335" />
         </g>
       </svg>
+
       <div className="ll" aria-hidden="true">
         CECON
       </div>
-      <div className="l-bar">
+      <div className="l-bar" aria-hidden="true">
         <div className="l-fill"></div>
       </div>
-      <div className="l-txt" id="ltxt" aria-live="polite">
+      <div className="l-txt" aria-live="polite">
         {text}
       </div>
     </div>
